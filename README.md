@@ -10,7 +10,9 @@ sudo apt install -y snapd &&
 sudo snap install intellij-idea-ultimate --classic &&
 echo 'X11Forwarding yes' >> /etc/ssh/sshd_config &&
 echo 'X11UseForwarding yes' >> /etc/ssh/sshd_config &&
-service sshd restart
+service sshd restart &&
+git clone https://github.com/tom-power/intellij-x11-macos &&
+cp ./intellij-x11-macos/settings.zip ~/Downloads
 ```
 
 #### On macOS client
@@ -18,16 +20,15 @@ service sshd restart
 brew cask install xquartz &&
 ssh-copy-id user@host &&
 git clone https://github.com/tom-power/intellij-x11-macos &&
-cp ./intellij-x11-macos/.Xmodmap ~/ &&
-cp ./intellij-x11-macos/settings.zip ~/Downloads
-```
-```
-Intellij -> File -> Manage IDE Settings -> Import Settings -> Select ~/Downloads/settings.zip -> keymaps
-Intellij -> Preferences -> Keymap -> select Mac OS 10.5+ pc
+cp ./intellij-x11-macos/.Xmodmap ~/
 ```
 ```
 XQuartz -> Applications -> customise -> Add Item
 Name: intellij
 Command: add ssh user@host -Y '/snap/bin/intellij-idea-ultimate'
-XQuartz -> Applications -> intellij # to use
+```
+```
+XQuartz -> Applications -> intellij # launch IntelliJ
+Intellij -> File -> Manage IDE Settings -> Import Settings -> Select ~/Downloads/settings.zip -> keymaps
+Intellij -> Preferences -> Keymap -> select Mac OS 10.5+ pc
 ```
