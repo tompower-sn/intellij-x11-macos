@@ -1,0 +1,27 @@
+!clear Mod1
+clear Mod2
+clear Control
+clear lock
+
+! this is needed for some reason..
+keycode 204 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 205 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 206 = NoSymbol NoSymbol NoSymbol NoSymbol 
+keycode 207 = NoSymbol NoSymbol NoSymbol NoSymbol
+
+!keycode 66 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 67 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 63 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 71 = NoSymbol NoSymbol NoSymbol NoSymbol
+
+!keycode 66 = Alt_L Alt_L Alt_L Alt_L
+!add Mod1 = Alt_L
+
+keycode 67 = Meta_L Meta_L Meta_L Meta_L
+add Mod2 = Meta_L
+
+keycode 63 = Control_L Control_L Control_L Control_L
+add control = Control_L
+
+keycode 71 = Control_R Control_R Control_R Control_R
+add control = Control_R
